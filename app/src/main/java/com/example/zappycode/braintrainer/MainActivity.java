@@ -40,7 +40,7 @@ MainActivity extends AppCompatActivity {
         playAgainButton.setVisibility(View.INVISIBLE);
         resultTextView.setText("");
 
-        new CountDownTimer(30100,1000) {
+        new CountDownTimer(30100,1000) {//Changer the time for longer or shorter durations.
 
             @Override
             public void onTick(long l) {
@@ -50,7 +50,7 @@ MainActivity extends AppCompatActivity {
             @Override
             public void onFinish() {
                 resultTextView.setText("Done!");
-                playAgainButton.setVisibility(View.VISIBLE);
+                playAgainButton.setVisibility(View.VISIBLE);//need to add code to disable buttons here after!
             }
         }.start();
     }
@@ -76,7 +76,7 @@ MainActivity extends AppCompatActivity {
     public void newQuestion() {
         Random rand = new Random();
 
-        int a = rand.nextInt(21);
+        int a = rand.nextInt(21);//change this number(21) as per requirement!
         int b = rand.nextInt(21);
 
         sumTextView.setText(Integer.toString(a) + " + " + Integer.toString(b));
